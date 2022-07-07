@@ -1,12 +1,16 @@
 <?php
 include_once __DIR__ . '/Movie.php';
 
+$arrayFilm = [];
+
 $ioSonoLeggenda = new Movie('Io sono Leggenda', 'azione', 2007, 'James Lassiter', 0);
 $ironMan3 = new Movie('iron man 3', 'azione/fantascienza', 2013, 'Shane Black', 0);
 $captainAmerica = new Movie('Captain America: The Winter Soldier', 'azione', 2014, 'Joe Russo', 0);
 $doctorStrange = new Movie('Doctor Strange', 'azione', 2016, 'Scott Derrickson', 0);
 
-// var_dump($ioSonoLeggenda, $ironMan3, $captainAmerica, $doctorStrange);
+array_push($arrayFilm, $ioSonoLeggenda, $ironMan3, $captainAmerica, $doctorStrange);
+
+// var_dump($arrayFilm);
 
 ?>
 
@@ -21,103 +25,41 @@ $doctorStrange = new Movie('Doctor Strange', 'azione', 2016, 'Scott Derrickson',
     <title>Movie</title>
 </head>
 <body>
-    <div class="container">
-        <div class="film-card">
-            <!-- title -->
-            <h1>
-                <?= ' ' . $ioSonoLeggenda->title; ?>
-            </h1>
-            <ul>
-                <li>
-                    Genere: 
-                    <?= ' ' . $ioSonoLeggenda->genre; ?>
-                </li>
-                <li>
-                    Anno: 
-                    <?= ' ' . $ioSonoLeggenda->year; ?>
-                </li>
-                <li>
-                    Regista: 
-                    <?= ' ' . $ioSonoLeggenda->director; ?>
-                </li>
-                <li>
-                    Voto:
-                    <?= ' ' . $ioSonoLeggenda->rating; ?>
-                </li>
-            </ul>
-        </div>
-        <div class="film-card">
-            <!-- title -->
-            <h1>
-                <?= ' ' . $ironMan3->title; ?>
-            </h1>
-            <ul>
-                <li>
-                    Genere: 
-                    <?= ' ' . $ironMan3->genre; ?>
-                </li>
-                <li>
-                    Anno: 
-                    <?= ' ' . $ironMan3->year; ?>
-                </li>
-                <li>
-                    Regista: 
-                    <?= ' ' . $ironMan3->director; ?>
-                </li>
-                <li>
-                    Voto:
-                    <?= ' ' . $ironMan3->rating; ?>
-                </li>
-            </ul>
-        </div>
-        <div class="film-card">
-            <!-- title -->
-            <h1>
-                <?= ' ' . $captainAmerica->title; ?>
-            </h1>
-            <ul>
-                <li>
-                    Genere: 
-                    <?= ' ' . $captainAmerica->genre; ?>
-                </li>
-                <li>
-                    Anno: 
-                    <?= ' ' . $captainAmerica->year; ?>
-                </li>
-                <li>
-                    Regista: 
-                    <?= ' ' . $captainAmerica->director; ?>
-                </li>
-                <li>
-                    Voto:
-                    <?= ' ' . $captainAmerica->rating; ?>
-                </li>
-            </ul>
-        </div>
-        <div class="film-card">
-            <!-- title -->
-            <h1>
-                <?= ' ' . $doctorStrange->title; ?>
-            </h1>
-            <ul>
-                <li>
-                    Genere: 
-                    <?= ' ' . $doctorStrange->genre; ?>
-                </li>
-                <li>
-                    Anno: 
-                    <?= ' ' . $doctorStrange->year; ?>
-                </li>
-                <li>
-                    Regista: 
-                    <?= ' ' . $doctorStrange->director; ?>
-                </li>
-                <li>
-                    Voto:
-                    <?= ' ' . $doctorStrange->rating; ?>
-                </li>
-            </ul>
-        </div>
+    <div class="container"><?php
+        
+        foreach ($arrayFilm as $film) { ?>
+            <div class="film-card">
+                <h1>
+                    Titolo:
+                    <?= $film->title ?>
+                </h1>
+                <ul>
+                    <li>
+                        Genere: 
+                        <?= $film->genre ?>
+                    </li>
+                    <li>
+                        Anno: 
+                        <?= $film->year ?>
+                    </li>
+                    <li>
+                        Regista: 
+                        <?= $film->director ?>
+                    </li>
+                    <li>
+                        Voto: 
+                        <?= $film->rating ?>
+                    </li>
+                    
+                </ul>
+            </div><?php 
+        }
+
+
+        
+            
+
+    ?>
     </div>
 </body>
 </html>
