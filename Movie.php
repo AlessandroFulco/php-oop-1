@@ -2,7 +2,6 @@
 
 class Movie 
 {
-
     // attributi d'istanza
     public $title;
     public $genre;
@@ -22,6 +21,6 @@ class Movie
 
 
 
-
-
 } 
+
+

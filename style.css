@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: arial, helvetica, sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-wrap: wrap;
+
+}
+
+.film-card {
+    width: calc(100% / 4);
+    min-height: 300px;
+    border: 20px solid black;
+    padding: 10px;
+}
+
+
+ul {
+    list-style-type: none;
+}
+ul li {
+    padding: 10px 0;
+}
