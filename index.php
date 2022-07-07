@@ -1,10 +1,10 @@
 <?php
 include_once __DIR__ . '/Movie.php';
 
-$ioSonoLeggenda = new Movie('Io sono Leggenda', 'azione', 2007, 'James Lassiter', 4);
-$ironMan3 = new Movie('iron man 3', 'azione/fantascienza', 2013, 'Shane Black', 3);
-$captainAmerica = new Movie('Captain America: The Winter Soldier', 'azione', 2014, 'Joe Russo', 1);
-$doctorStrange = new Movie('Doctor Strange', 'azione', 2016, 'Scott Derrickson', 2);
+$ioSonoLeggenda = new Movie('Io sono Leggenda', 'azione', 2007, 'James Lassiter', 0);
+$ironMan3 = new Movie('iron man 3', 'azione/fantascienza', 2013, 'Shane Black', 0);
+$captainAmerica = new Movie('Captain America: The Winter Soldier', 'azione', 2014, 'Joe Russo', 0);
+$doctorStrange = new Movie('Doctor Strange', 'azione', 2016, 'Scott Derrickson', 0);
 
 // var_dump($ioSonoLeggenda, $ironMan3, $captainAmerica, $doctorStrange);
 

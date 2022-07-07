@@ -16,7 +16,11 @@ class Movie
         $this->genre = $genre;
         $this->year = $year;
         $this->director = $director;
-        $this->rating = $rating;
+        $this->randomRating();
+    }
+
+    public function randomRating(){
+        $this->rating = rand(1, 5);
     }
 
 
